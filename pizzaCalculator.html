@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		const PRICESMALL = 3;
+		const PRICEMEDIUM = 5;
+		const PRICELARGE = 8;
+
+		alert("U kunt kiezen uit een 'small', 'medium' of 'large' pizza.\nGeef aub aan hoeveel u van elke pizza wilt.")
+
+		// hieronder wordt de vraag gesteld hoeveel pizza's u van elke maat wilt.
+		var qtySmall = prompt("De prijs van een small pizza is: € "+PRICESMALL+" \nHoeveel small pizza's wilt u?");
+		var qtyMedium = prompt("De prijs van een medium pizza is: € "+PRICEMEDIUM+" \nHoeveel medium pizza's wilt u?");
+		var qtyLarge = prompt("De prijs van een large pizza is: € "+PRICELARGE+" \nHoeveel large pizza's wilt u?");
+
+
+		// hieronder wordt er op het scherm geschreven hoeveel pizza's u van elke maat heeft besteld met daarbij de totaal prijs voor die betreffende maat.
+		totalPriceSmall = qtySmall * PRICESMALL;
+		document.write("U heeft " + qtySmall + " small pizza besteld á € " + PRICESMALL + " per stuk. Prijs: € " + totalPriceSmall + "<br>");
+		totalPriceMedium = qtyMedium * PRICEMEDIUM;
+		document.write("U heeft " + qtyMedium + " medium pizza besteld á € " + PRICEMEDIUM + " per stuk. Prijs: € " + totalPriceMedium + "<br>");
+		totalPriceLarge = qtyLarge * PRICELARGE;
+		document.write("U heeft " + qtyLarge + " large pizza besteld á € " + PRICELARGE + " per stuk. Prijs: € " + totalPriceLarge + "<br>");
+
+
+		//Hieronder wordt van elke maat de prijs bij elkaar opgeteld, en krijg je de totaal prijs voor de hele bestelling.
+		document.write("<hr>");
+		var totalPrice = totalPriceSmall + totalPriceMedium + totalPriceLarge;
+		document.write("De totaal prijs is: € " + totalPrice);
+	</script>
+</body>
+</html>
